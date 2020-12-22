@@ -1,0 +1,7 @@
+
+
+funcdict = {
+    "modname": "mymod",
+    "modroot": {}
+}
+
