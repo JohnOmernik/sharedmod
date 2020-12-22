@@ -1,6 +1,6 @@
 
 
-def math_sqr(val, inttimes):
+def math_exp(val, inttimes):
     retval = val
     if inttimes == 0:
         retval = 1

@@ -23,25 +23,35 @@ pjoin = os.path.join
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Get the current package version.
-version_ns = {}
 
-with open(pjoin(here,'mymod', '_version.py')) as f:
+version_ns = {}
+with open(pjoin(here,'mymod', '_funcdocs.py')) as f:
     exec(f.read(), {}, version_ns)
+
+
+version_ns = {}
+with open(pjoin(here,'mymod', '_funcdocs.py')) as f:
+    exec(f.read(), {}, version_ns)
+myversion = version_ns['funcdict']['modvers']
+myname = version_ns['funcdict']['modname']
+print("%s Version: %s" % (myname, myversion))
+
+
 
 #    packages=['integration_core', 'visualization_core', 'doc_core', 'profile_core', 'mymod'],
 
 setup_args = dict(
-    name='jupyter_integration_sharedmod',
+    name='jupyter_integration_sharedmod_example',
     packages=setuptools.find_packages(),
-    version=version_ns['__version__'],
+    version=myversion,
     description="""An Interface Jupyter Notebooks.""",
     long_description="A core class for working with custom integrations for Python3 based Jupyter Notebooks",
     author="John Omernik",
     author_email="mandolinplayer@gmail.comm",
-    url="https://github.com/JohnOmernik/jupyter_integration_base",
+    url="https://github.com/JohnOmernik/sharedmod",
     license="Apache",
     platforms="Linux, Mac OS X",
-    keywords=['Interactive', 'Interpreter', 'Shell', 'Notebook', 'Jupyter', "jupyter_integration_base"],
+    keywords=['Interactive', 'Interpreter', 'Shell', 'Notebook', 'Jupyter', "jupyter_integration_base_sharedfuncs"],
     classifiers=[
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
