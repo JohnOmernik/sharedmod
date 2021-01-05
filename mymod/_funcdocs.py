@@ -11,7 +11,7 @@
 
 funcdict = {
   "modname": "mymod",
-  "modvers": "0.1.3",
+  "modvers": "0.1.6",
   "modroot": {
     "funcs": [
       {
@@ -122,6 +122,20 @@ funcdict = {
             "description": "Takes two strs, val1 and vals and concatenates them together with an optional sep. If no sep is provided, '' (empty string) is used",
             "keywords": ["strings", "concat", "basic"],
             "usage": "v1 = 'Hello'\nv2 = 'Goodbye'\nprint(mymod.string_funcs.str_concat(v1, v2))\n\n>>> HelloGoodbye"
+          },
+          {
+            "name": "str_split",
+            "authors": ["John Omernik"],
+            "args": [
+                      ["splitstr", "str", "req", "The string to split"],
+                      ["splitval", "str", "req", "The seperator to us to split on "]
+                    ],
+            "returns": [
+                         ["list", "A list of values split"]
+                       ],
+            "description": "Takes a string, splitstr, and split it based on the value splitval. Returns a list of split items",
+            "keywords": ["strings", "split", "basic"],
+            "usage": "v1 = 'Hello,Goodbye'\nmylist = mymod.string_funcs.str_split(v1, ",")\n\nmylist>>> ['Hello', 'Goodbye']"
           }
         ],
         "children": {}
