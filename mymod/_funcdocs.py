@@ -135,7 +135,7 @@ funcdict = {
                        ],
             "description": "Takes a string, splitstr, and split it based on the value splitval. Returns a list of split items",
             "keywords": ["strings", "split", "basic"],
-            "usage": "v1 = 'Hello,Goodbye'\nmylist = mymod.string_funcs.str_split(v1, ",")\n\nmylist>>> ['Hello', 'Goodbye']"
+            "usage": "v1 = 'Hello,Goodbye'\nmylist = mymod.string_funcs.str_split(v1, ',')\n\nmylist>>> ['Hello', 'Goodbye']"
           }
         ],
         "children": {}
@@ -143,4 +143,3 @@ funcdict = {
     }
   }
 }
-
